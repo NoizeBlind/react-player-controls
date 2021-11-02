@@ -63,8 +63,8 @@
     "react": "^16.8.0"
   },
   "dependencies": {
+    "@use-gesture/react": "^10.1.1",
     "autobind-decorator": "^2.4.0",
-    "prop-types": "^15.6.2",
-    "react-use-gesture": "^7.0.16"
+    "prop-types": "^15.6.2"
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useGesture } from 'react-use-gesture'
+import { useGesture } from '@use-gesture/react'
 
 import { Direction } from '../constants.js'
 
@@ -73,6 +73,9 @@ function Slider ({
     {
       axis: direction === Direction.HORIZONTAL ? 'x' : 'y',
       filterTaps: true,
+      eventOptions: {
+        capture: true
+      }
     }
   )
 
@@ -118,6 +121,7 @@ Slider.propTypes = {
 }
 
 function arePropsEqual (prevProps, nextProps) {
+  // eslint-disable-next-line no-unused-vars
   for (const prop in nextProps) {
     if (nextProps[prop] !== prevProps[prop]) {
       return false
